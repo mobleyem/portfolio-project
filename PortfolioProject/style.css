@@ -3,22 +3,19 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 body {
     background-color: rgb(39, 38, 38);
     width: 100%;
-    border: none;
-    margin: 0;
-    padding: 0;
 }
 
 .background-image {
     background-image: url(./resources/Images/CompressedBackground.jpeg);
     height: 100vh;
-    width: 100%;
-    margin: 0;
-    border: none;
     position: relative;
     background-size: cover;
     background-position: 50% 5%;
@@ -31,38 +28,45 @@ h1 {
     color: hsl(199, 100%, 75%);
     position: absolute;
     bottom: 20vh;
-    top: 70vh;
+    top: 50vh;
     right: 3vw;
-    margin: 0;
     text-align: right;
     vertical-align: text-bottom;
     z-index: 10;
 }
 
-#navbar {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-decoration: none;
+    background-color: rgba(5, 5, 5, 0.4);
     height: 100vh;
-    width: 10vw;
+    width: 10%;
     position: fixed;
-    right: 0;
+    left: 0;
     top: 0;
     z-index: 10;
 }
 
+nav ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 li {
     height: 33.3vh;
-    width: 10vw;
     line-height: 33.3vh;
     font-family: "Dancing Script", cursive;
     text-align: center;
-    background-color: rgba(5, 5, 5, 0.4);
 }
 
 li a {
     text-decoration: none;
-    display: block;
     color:hsl(199, 100%, 75%);
     font-size: 3vw;
     font-weight: 700;
@@ -72,20 +76,13 @@ li:hover {
     background-color: rgb(5, 5, 5, 0.7);
 }
 
-main {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
 section {
+    display: flex;
     width: 100%;
-    margin: 0;
-    border: 0;
-    padding: 0;
     height: 105vh;
 }
 
-.section-head {
+h3 {
     background-color:hsl(199, 100%, 75%);
     color:rgb(39, 38, 38);
     width: 50%;
@@ -94,35 +91,20 @@ section {
     text-align: center;
     line-height: 105vh;
     font-size: 4vw;
-    display: block;
-    margin: 0;
-    border: none;
-    padding: 0;
     z-index: 1;
 }
 
-.paragraph {
+p {
     background-color:rgb(78, 76, 76);
     color: rgb(245, 245, 245);
     width: 50%;
     height: 105vh;
     text-align: center;
     line-height: 105vh;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-   #about-me {
-    position: absolute;
-    width: 50%;
-    top: 100vh;
-    right: 0;
-    display: block;
     z-index: 2;
 }
 
-   #projects {
+#projects {
     width: 50vw;
     height: 105vh;
     position: absolute;
@@ -139,19 +121,4 @@ section {
     left: 0;
     display: block;
     z-index: 2;
-}
-
-   #contact {
-    position: absolute;
-    top: 310vh;
-    left: 0;        
-}
-
-   #contact-me {
-    position: absolute;
-    width: 50%;
-    top: 310vh;
-    right: 0;
-    display: block;
-    z-index: 2;
-}
+   }
